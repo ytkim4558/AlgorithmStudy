@@ -2,12 +2,12 @@ package CrackingTheCodingInterview6th.Java.Ch_02_Linked_Lists;
 
 public class Node {
     public Node next = null;
-    public int data;
-    public Node(int d) {
+    public Object data;
+    public Node(Object d) {
         data = d;
     }
 
-    void appendTail(int d) {
+    void appendTail(Object d) {
         Node tail = new Node(d);
         Node n = this;
         while (n.next != null) {
