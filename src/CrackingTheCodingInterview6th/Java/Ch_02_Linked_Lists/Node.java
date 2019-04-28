@@ -7,21 +7,23 @@ public class Node {
         data = d;
     }
 
-    void appendTail(Object d) {
+    public Node appendTail(Object d) {
         Node tail = new Node(d);
         Node n = this;
         while (n.next != null) {
             n = n.next;
         }
         n.next = tail;
+        return tail;
     }
 
     public void printLoopNodeDataToEnd() {
         Node n = this;
         while(n != null) {
-            System.out.print(n.data + " -> ");
+            System.out.print(n.data);
+            if(n.next != null) System.out.print(" -> ");
             n = n.next;
         }
-        System.out.println("Null");
+        System.out.println("");
     }
 }
