@@ -15,4 +15,13 @@ public class Node {
         }
         n.next = tail;
     }
+
+    public void printLoopNodeDataToEnd() {
+        Node n = this;
+        while(n != null) {
+            System.out.print(n.data + " -> ");
+            n = n.next;
+        }
+        System.out.println("Null");
+    }
 }
