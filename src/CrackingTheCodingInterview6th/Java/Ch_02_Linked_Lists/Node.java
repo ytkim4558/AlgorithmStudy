@@ -8,11 +8,11 @@ public class Node {
     }
 
     void appendTail(int d) {
-        Node end = new Node(d);
+        Node tail = new Node(d);
         Node n = this;
         while (n.next != null) {
             n = n.next;
         }
-        n.next = end;
+        n.next = tail;
     }
 }
